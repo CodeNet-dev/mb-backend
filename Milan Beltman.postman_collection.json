@@ -13,10 +13,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://MB-backend.test/wp-json/milanbeltman/v1/test/test/test",
+					"raw": "http://mb-backend.test/wp-json/milanbeltman/v1/test/test/test",
 					"protocol": "http",
 					"host": [
-						"MB-backend",
+						"mb-backend",
 						"test"
 					],
 					"path": [
