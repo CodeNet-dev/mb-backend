@@ -13,19 +13,39 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://mb-backend.test/wp-json/milanbeltman/v1/test/test/test",
+					"raw": "http://MB-backend.test/wp-json/milanbeltman/v1/test",
 					"protocol": "http",
 					"host": [
-						"mb-backend",
+						"MB-backend",
 						"test"
 					],
 					"path": [
 						"wp-json",
 						"milanbeltman",
 						"v1",
-						"test",
-						"test",
 						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "General settings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://MB-backend.test/wp-json/milanbeltman/v1/general-settings",
+					"protocol": "http",
+					"host": [
+						"MB-backend",
+						"test"
+					],
+					"path": [
+						"wp-json",
+						"milanbeltman",
+						"v1",
+						"general-settings"
 					]
 				}
 			},
