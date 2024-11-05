@@ -28,7 +28,8 @@ function get_all_posts($data)
                 'acf' => get_fields($post->ID),
                 'content' => apply_filters('the_content', $post->post_content),
                 'date' => get_the_date('', $post->ID),
-                'link' => get_permalink($post->ID)
+                'link' => get_permalink($post->ID),
+                'slug' => $post->post_name
             ];
         }
 
