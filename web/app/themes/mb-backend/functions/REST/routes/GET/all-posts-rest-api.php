@@ -22,6 +22,15 @@ function get_all_posts($data)
         $response = [];
 
         foreach ($posts as $post) {
+            $categories = get_the_category($post->ID);
+            $category_names = [];
+
+            if (!empty($categories)) {
+                foreach ($categories as $category) {
+                    $category_names[] = $category->name;
+                }
+            }
+
             $response[] = [
                 'ID' => $post->ID,
                 'title' => get_the_title($post->ID),
@@ -29,7 +38,8 @@ function get_all_posts($data)
                 'content' => apply_filters('the_content', $post->post_content),
                 'date' => get_the_date('', $post->ID),
                 'link' => get_permalink($post->ID),
-                'slug' => $post->post_name
+                'slug' => $post->post_name,
+                'categories' => $category_names
             ];
         }
 
