@@ -18,9 +18,9 @@ function get_all_posts($data)
     $query = new WP_Query($args);
     $posts = $query->get_posts();
 
-    if ($posts) {
-        $response = [];
+    $response = [];
 
+    if ($posts) {
         foreach ($posts as $post) {
             $categories = get_the_category($post->ID);
             $category_names = [];
@@ -42,11 +42,7 @@ function get_all_posts($data)
                 'categories' => $category_names
             ];
         }
-
-        return new WP_REST_Response($response, 200);
     }
 
-    return new WP_REST_Response([
-        "message" => "No posts found",
-    ], 404);
+    return new WP_REST_Response($response, 200);
 }
